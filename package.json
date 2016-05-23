@@ -1,0 +1,39 @@
+{
+    "name": "training-js-mazerobot",
+    "version": "0.0.0",
+    "description": "Programming game to help robot get through the maze",
+    "main": "src/index.js",
+    "scripts": {
+        "build": "./node_modules/.bin/webpack",
+        "watch": "./node_modules/.bin/webpack -w",
+        "test": "./node_modules/.bin/babel-node --presets es2015 tests"
+    },
+    "author": "Shmavon Gazanchyan <sgazanchyan@gmail.com>",
+    "contributors": [
+        "Riccardo Bellingeri <riccardo.bellingeri@gmail.com>"
+    ],
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MunGell/training-js-mazerobot.git"
+    },
+    "bugs": {
+        "url": "https://github.com/MunGell/training-js-mazerobot/issues"
+    },
+    "homepage": "https://github.com/MunGell/training-js-mazerobot#readme",
+    "devDependencies": {
+        "babel-cli": "^6.8.0",
+        "babel-core": "^6.9.0",
+        "babel-loader": "^6.2.4",
+        "babel-preset-es2015": "^6.9.0",
+        "babel-preset-react": "^6.5.0",
+        "glob": "^7.0.3",
+        "json-loader": "^0.5.4",
+        "tape": "^4.5.1",
+        "webpack": "^1.13.0"
+    },
+    "dependencies": {
+        "react": "^15.0.2",
+        "react-dom": "^15.0.2"
+    }
+}
