@@ -1,3 +1,5 @@
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
     cache: true,
     entry: './src/index',
@@ -17,7 +19,14 @@ module.exports = {
             {
                 test: /\.json$/,
                 loader: 'json-loader'
+            },
+            {
+                test: /\.less$/,
+                loader: ExtractTextPlugin.extract("css-loader!less-loader")
             }
         ]
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin("build/app.css")
+    ]
 };
