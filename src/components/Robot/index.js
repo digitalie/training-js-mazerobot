@@ -18,8 +18,8 @@ export default React.createClass({
         return {
             width: cellSize,
             height: cellSize,
-            top: this.props.position.x * cellSize,
-            left: this.props.position.y * cellSize
+            top: this.props.position.y * cellSize,
+            left: this.props.position.x * cellSize
         };
     },
 

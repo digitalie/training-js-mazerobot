@@ -1,4 +1,4 @@
-export const cellSize = 100;
+export const cellSize = 50;
 
 export const cellTypes = [
     'path',
