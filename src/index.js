@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Grid from './components/Grid';
-import Map from './map.json';
+import {gridMatrix} from './map.js';
 
 let App = React.createClass({
     render: function () {
         return <div id="root">
-            <Grid map={Map} />
+            <Grid map={gridMatrix}/>
         </div>;
     }
 });

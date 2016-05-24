@@ -1,4 +1,5 @@
 import React from 'react';
+import {cellTypes} from '../../map.js';
 
 require('./style.less');
 
@@ -6,18 +7,12 @@ export default React.createClass({
 
     getDefaultProps: function () {
         return {
-            type: 'path'
+            type: 0
         }
     },
 
     _getType: function() {
-        switch (this.props.type) {
-            case 1:
-                return 'fence';
-            case 0:
-            default:
-                return 'path';
-        }
+        return cellTypes[this.props.type]
     },
 
     _getClasses: function() {
