@@ -1,4 +1,4 @@
-import {gridMatrix} from './Config';
+import {matrix} from './Config';
 
 /**
  * Function to deal with situations

@@ -5,7 +5,7 @@ export const cellTypes = [
     'fence'
 ];
 
-export const gridMatrix = [
+export const matrix = [
     [0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
     [0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 1, 0, 0, 0],
