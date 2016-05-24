@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Cell from './components/Cell';
+import Grid from './components/Grid';
 
 let App = React.createClass({
     render: function () {
         return <div id="root">
-            <Cell type="path"/>
+            <Grid size={10} />
         </div>;
     }
 });
