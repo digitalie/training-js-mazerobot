@@ -11,12 +11,12 @@ export default React.createClass({
     },
 
     _getClasses: function() {
-        return 'cell cell-' + this.props.type;
+        return 'cell cell--' + this.props.type;
     },
 
     render: function () {
         return <div className={this._getClasses()}>
-            Hello
+            Cell
         </div>
     }
 });

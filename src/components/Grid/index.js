@@ -1,6 +1,8 @@
 import React from 'react';
 import Cell from '../Cell'
 
+require('./style.less');
+
 export default React.createClass({
 
     getDefaultProps: function () {
@@ -10,18 +12,18 @@ export default React.createClass({
     },
 
     render: function () {
-        let sizeArray = Array.from(Array(this.props.size));
+        let sizeArray = Array.from(new Array(this.props.size));
         return (
             <div className="grid">
-                {{sizeArray.map(function() {
+                {sizeArray.map(function() {
                     return (
                         <div className="grid__row">
-                            {{sizeArray.map(function() {
+                            {sizeArray.map(function() {
                                 return <Cell type="path" />;
-                            })}}
+                            })}
                         </div>
                     );
-                })}}
+                })}
             </div>
         );
     }
