@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Grid from './components/Grid';
+import Map from './map.json';
 
 let App = React.createClass({
     render: function () {
         return <div id="root">
-            <Grid size={10} />
+            <Grid map={Map} />
         </div>;
     }
 });

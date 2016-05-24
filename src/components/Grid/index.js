@@ -7,19 +7,18 @@ export default React.createClass({
 
     getDefaultProps: function () {
         return {
-            size: 10
-        }
+            map: [[]]
+        };
     },
 
     render: function () {
-        let sizeArray = Array.from(new Array(this.props.size));
         return (
             <div className="grid">
-                {sizeArray.map(function() {
+                {this.props.map.map(function(row, rowId) {
                     return (
-                        <div className="grid__row">
-                            {sizeArray.map(function() {
-                                return <Cell type="path" />;
+                        <div key={rowId} className="grid__row">
+                            {row.map(function(cell, cellId) {
+                                return <Cell key={String(rowId).concat(cellId)} type={cell} />;
                             })}
                         </div>
                     );

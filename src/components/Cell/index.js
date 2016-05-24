@@ -10,8 +10,18 @@ export default React.createClass({
         }
     },
 
+    _getType: function() {
+        switch (this.props.type) {
+            case 1:
+                return 'fence';
+            case 0:
+            default:
+                return 'path';
+        }
+    },
+
     _getClasses: function() {
-        return 'cell cell--' + this.props.type;
+        return 'cell cell--' + this._getType();
     },
 
     render: function () {
