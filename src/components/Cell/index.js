@@ -1,5 +1,5 @@
 import React from 'react';
-import {cellTypes} from '../../map.js';
+import {cellTypes, cellSize} from '../../map.js';
 
 require('./style.less');
 
@@ -19,8 +19,16 @@ export default React.createClass({
         return 'cell cell--' + this._getType();
     },
 
+    _getDynamicStyling: function () {
+        return {
+            width: cellSize,
+            height: cellSize
+        };
+    },
+
     render: function () {
-        return <div className={this._getClasses()}>
-        </div>
+        return (
+            <div className={this._getClasses()} style={this._getDynamicStyling()}></div>
+        )
     }
 });

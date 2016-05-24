@@ -1,3 +1,5 @@
+export const cellSize = 100;
+
 export const cellTypes = [
     'path',
     'fence'
