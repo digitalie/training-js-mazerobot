@@ -26,7 +26,6 @@ export default React.createClass({
 
     render: function () {
         return <div className={this._getClasses()}>
-            Cell
         </div>
     }
 });
