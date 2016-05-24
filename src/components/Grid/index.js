@@ -1,6 +1,6 @@
 import React from 'react';
 import Cell from '../Cell';
-import {cellSize} from '../../map';
+import {cellSize} from '../../Config';
 
 require('./style.less');
 

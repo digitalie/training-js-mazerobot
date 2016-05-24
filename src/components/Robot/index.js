@@ -1,5 +1,5 @@
 import React from 'react';
-import {cellSize} from '../../map';
+import {cellSize} from '../../Config';
 
 require('./style.less');
 
@@ -10,7 +10,8 @@ export default React.createClass({
             position: {
                 x: 0,
                 y: 0
-            }
+            },
+            direction: 'east'
         }
     },
 
@@ -25,7 +26,9 @@ export default React.createClass({
 
     render: function () {
         return (
-            <div className="robot" style={this._getDynamicStyling()}></div>
+            <div className="robot" style={this._getDynamicStyling()}>
+                {this.props.direction}
+            </div>
         )
     }
 });
