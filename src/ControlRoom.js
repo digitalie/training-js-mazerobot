@@ -12,11 +12,11 @@ export function obstacleAhead(position, direction) {
     // demo output
     return {
         position: {
-            x: position.x + 1,
-            y: 0
+            x: position.x,
+            y: position.y
         },
-        direction: 'east',
-        log: 'simple logger'
+        direction: 'south',
+        log: 'I am stuck!'
     };
 }
 
@@ -32,10 +32,10 @@ export function pathAhead(position, direction) {
     // demo output
     return {
         position: {
-            x: position.x + 1,
-            y: 0
+            x: position.x,
+            y: position.y + 1
         },
-        direction: 'east',
-        log: 'simple logger'
+        direction: 'south',
+        log: 'I am moving!'
     };
 }
