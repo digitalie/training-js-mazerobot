@@ -22,6 +22,7 @@
     },
     "homepage": "https://github.com/MunGell/training-js-mazerobot#readme",
     "devDependencies": {
+        "autoprefixer-loader": "^3.2.0",
         "babel-cli": "^6.8.0",
         "babel-core": "^6.9.0",
         "babel-loader": "^6.2.4",
@@ -34,6 +35,7 @@
         "json-loader": "^0.5.4",
         "less": "^2.7.1",
         "less-loader": "^2.2.3",
+        "path": "^0.12.7",
         "tape": "^4.5.1",
         "url-loader": "^0.5.7",
         "webpack": "^1.13.0"
