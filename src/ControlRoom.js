@@ -15,7 +15,8 @@ export function obstacleAhead(position, direction) {
             x: position.x + 1,
             y: 0
         },
-        direction: 'east'
+        direction: 'east',
+        log: 'simple logger'
     };
 }
 
@@ -34,6 +35,7 @@ export function pathAhead(position, direction) {
             x: position.x + 1,
             y: 0
         },
-        direction: 'east'
+        direction: 'east',
+        log: 'simple logger'
     };
 }
