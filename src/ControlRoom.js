@@ -2,12 +2,12 @@ import {matrix} from './Config';
 
 /**
  * Function to deal with situations
- * when fence is in front of the robot
+ * when obstacle is in front of the robot
  * @param {Object} position
  * @param {String} direction
  * @return {Object} new position and direction object
  */
-export function fenceAhead(position, direction) {
+export function obstacleAhead(position, direction) {
     // TODO: implement this function
     // demo output
     return {

@@ -2,7 +2,8 @@ export const cellSize = 50;
 
 export const cellTypes = [
     'path',
-    'fence'
+    'obstacle',
+    'trap'
 ];
 
 export const matrix = [
