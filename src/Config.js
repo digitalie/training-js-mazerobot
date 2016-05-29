@@ -1,11 +1,23 @@
-export const cellSize = 50;
+/**
+ * Cell size in pixels
+ * @type {number}
+ */
+export const size = 50;
 
-export const cellTypes = [
+/**
+ * Cell types
+ * @type {string[]}
+ */
+export const types = [
     'path',
     'obstacle',
     'trap'
 ];
 
+/**
+ * Map matrix
+ * @type {*[]}
+ */
 export const matrix = [
     [0, 1, 0, 0, 0, 0, 1, 0, 0, 0],
     [0, 1, 0, 0, 0, 0, 1, 0, 0, 0],

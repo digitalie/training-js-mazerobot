@@ -12,8 +12,8 @@ export function obstacleAhead(position, direction) {
     // demo output
     return {
         position: {
-            x: 1,
-            y: 1
+            x: position.x + 1,
+            y: 0
         },
         direction: 'east'
     };
@@ -31,8 +31,8 @@ export function pathAhead(position, direction) {
     // demo output
     return {
         position: {
-            x: 1,
-            y: 1
+            x: position.x + 1,
+            y: 0
         },
         direction: 'east'
     };

@@ -1,5 +1,5 @@
 import React from 'react';
-import {cellSize} from '../../Config';
+import {size} from '../../Config';
 
 require('./style.less');
 
@@ -17,10 +17,10 @@ export default React.createClass({
 
     _getDynamicStyling: function () {
         return {
-            width: cellSize,
-            height: cellSize,
-            top: this.props.position.y * cellSize,
-            left: this.props.position.x * cellSize
+            width: size,
+            height: size,
+            top: this.props.position.y * size,
+            left: this.props.position.x * size
         };
     },
 
