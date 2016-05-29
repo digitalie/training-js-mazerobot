@@ -44,13 +44,19 @@ let App = React.createClass({
 
     render: function () {
         return (
-            <div id="root">
-                <div id="field">
-                    <Grid map={matrix}/>
-                    <Robot {...this.state.robot} />
+            <div id="root" className="row">
+                <div className="col-sm-6 panel panel-default">
+                    <div className="panel-body">
+                        <div id="field">
+                            <Grid map={matrix}/>
+                            <Robot {...this.state.robot} />
+                        </div>
+                    </div>
                 </div>
-                <div id="sidebar">
-                    <button onClick={this._toggleEnabled}>Enable</button>
+                <div id="sidebar" className="col-sm-4 col-sm-offset-1 panel panel-default">
+                    <div className="panel-body">
+                        <button onClick={this._toggleEnabled} className={this.state.playback.enabled ? 'btn btn-danger' : 'btn btn-success'}>{this.state.playback.enabled ? 'Stop' : 'Start'}</button>
+                    </div>
                 </div>
                 <ReactInterval {...this.state.playback} />
             </div>

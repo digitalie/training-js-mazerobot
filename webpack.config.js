@@ -30,6 +30,10 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif)$/,
                 loader: 'url-loader?name=img/[hash].[ext]&limit=128'
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file-loader?name=fonts/[hash].[ext]'
             }
         ]
     },
