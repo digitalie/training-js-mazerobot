@@ -1,5 +1,20 @@
 .robot {
     position: absolute;
     display: block;
-    background: blue;
+    background: url('./img/robot.png') no-repeat 50% 50%;
+    background-size: contain;
+    transition: all 1s linear;
+
+    &--north {
+
+    }
+    &--east {
+        transform: rotate(90deg);
+    }
+    &--south {
+        transform: rotate(180deg);
+    }
+    &--west {
+        transform: rotate(270deg);
+    }
 }

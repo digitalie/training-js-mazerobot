@@ -23,6 +23,10 @@ module.exports = {
             {
                 test: /\.less$/,
                 loader: ExtractTextPlugin.extract("css-loader!less-loader")
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                loader: 'url-loader?limit=8192'
             }
         ]
     },

@@ -15,6 +15,10 @@ export default React.createClass({
         }
     },
 
+    _getClasses: function() {
+        return 'robot robot--' + this.props.direction;
+    },
+
     _getDynamicStyling: function () {
         return {
             width: size,
@@ -26,9 +30,7 @@ export default React.createClass({
 
     render: function () {
         return (
-            <div className="robot" style={this._getDynamicStyling()}>
-                {this.props.direction}
-            </div>
+            <div className={this._getClasses()} style={this._getDynamicStyling()}></div>
         )
     }
 });
