@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import ReactInterval from 'react-interval';
 import Grid from './components/Grid';
 import Robot from './components/Robot';
+import Console from './components/Console';
 import Controller from './Controller';
 import {matrix} from './Config';
 
 require('./style.less');
 
 let App = React.createClass({
+
     getInitialState() {
         return {
             playback: {
@@ -21,8 +23,10 @@ let App = React.createClass({
                     x: 0,
                     y: 0
                 },
-                direction: 'east'
-            }
+                direction: 'east',
+                log: 'Just started'
+            },
+            logs: []
         };
     },
 
@@ -37,8 +41,11 @@ let App = React.createClass({
     },
 
     _moveRobot: function () {
+        let command = Controller(this.state.robot);
+        this.state.logs.push(command.log);
         this.setState({
-            robot: Controller(this.state.robot)
+            robot: command,
+            logs: this.state.logs
         });
     },
 
@@ -55,7 +62,9 @@ let App = React.createClass({
                 </div>
                 <div id="sidebar" className="col-sm-4 col-sm-offset-1 panel panel-default">
                     <div className="panel-body">
-                        <button onClick={this._toggleEnabled} className={this.state.playback.enabled ? 'btn btn-danger' : 'btn btn-success'}>{this.state.playback.enabled ? 'Stop' : 'Start'}</button>
+                        <button onClick={this._toggleEnabled}
+                                className={this.state.playback.enabled ? 'btn btn-danger' : 'btn btn-success'}>{this.state.playback.enabled ? 'Stop' : 'Start'}</button>
+                        <Console logs={this.state.logs} />
                     </div>
                 </div>
                 <ReactInterval {...this.state.playback} />
