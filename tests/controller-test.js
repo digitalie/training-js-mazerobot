@@ -32,7 +32,7 @@ test('isPositionAvailable', t => {
     t.notOk(isPositionAvailable(matrix, {
         x: 2,
         y: 2
-    }), '[1,1] position is available');
+    }), '[2,2] position is available');
 
     t.end();
 });

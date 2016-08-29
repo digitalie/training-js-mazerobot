@@ -6,7 +6,7 @@ export default React.createClass({
 
     getDefaultProps: function () {
         return {
-            from: 'console',
+            from: '',
             message: ''
         };
     },
@@ -14,7 +14,7 @@ export default React.createClass({
     render: function () {
         return (
             <div className="console-log">
-                {this.props.from}: {this.props.message}
+                > {this.props.from ? this.props.from + ': ' : ''} {this.props.message}
             </div>
         );
     }

@@ -17,3 +17,5 @@ This exercise requires you to write navigation logic for the robot to achieve th
 3. Run `npm run watch` to start webpack compilation watcher
 4. Open `build/index.html` file in your browser
 5. Edit `src/ControlRoom.js` file to make your robot smarter
+
+To run tests use `npm test` command.
