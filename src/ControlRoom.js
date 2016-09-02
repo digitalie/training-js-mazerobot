@@ -52,13 +52,14 @@ export const obstacleAhead = (position, direction) => {
         newX = position.x;
         newY = position.y;
         randomChoice = Math.round(Math.random()); // {0, 1}
-        if (direction == 'north' || direction == 'south') {
-            //it means we can go east, west
+
+        if (Math.round(Math.random()) == 0) {
+            //randomly move on the horizontal axis
             newX += offset[randomChoice];
             newDirection = directions.horizontal[randomChoice];
         }
-        if (direction == 'west' || direction == 'east') {
-            //it means we can go north, south
+        else {
+            //randomly move on the vertical axis
             newY += offset[randomChoice];
             newDirection = directions.vertical[randomChoice];
         }
