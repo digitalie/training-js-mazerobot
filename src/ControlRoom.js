@@ -33,12 +33,12 @@ export function isPositionAvailable(position, direction) {
 
 /**
  * Function to deal with situations
- * when obstacle is in front of the robot
+ * when obstacle is in front of the robot or we want to change the direction
  * @param {Object} position
  * @param {String} direction
  * @return {Object} new position and direction object
  */
-export const obstacleAhead = (position, direction) => {
+export const changeDirection = (position, direction) => {
     const directions = {
             vertical: ['north', 'south'],
             horizontal: ['west', 'east']
@@ -46,9 +46,10 @@ export const obstacleAhead = (position, direction) => {
         offset = [-1, 1];
     let newDirection = direction,
         randomChoice,
-        newX, newY;
+        newX = position.x, newY = position.y;
 
-    while (!isPositionAvailable({x: position.x, y: position.y}, newDirection)) {
+    while (!isPositionAvailable({x: position.x, y: position.y}, newDirection)
+        || (newX == position.x && newY == position.y) ) {
         newX = position.x;
         newY = position.y;
         randomChoice = Math.round(Math.random()); // {0, 1}
@@ -65,14 +66,14 @@ export const obstacleAhead = (position, direction) => {
         }
     }
 
-    console.log(`Can't go ${direction}. Will head ${newDirection}.`);
+    console.log(`I will head ${newDirection}.`);
     return {
         position: {
             x: newX,
             y: newY
         },
         direction: newDirection,
-        log: 'I am stuck!'
+        log: `I'll change direction to ${newDirection} now.`
     };
 }
 
@@ -106,6 +107,6 @@ export const pathAhead = (position, direction) => {
             y
         },
         direction,
-        log: `I am moving ${direction}!`
+        log: ``
     };
 }

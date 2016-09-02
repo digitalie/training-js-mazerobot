@@ -15,7 +15,7 @@ let App = React.createClass({
         return {
             playback: {
                 enabled: false,
-                timeout: 500,
+                timeout: 333,
                 callback: this._moveRobot
             },
             robot: {
