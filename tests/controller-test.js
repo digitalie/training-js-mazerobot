@@ -1,5 +1,5 @@
 import {test} from 'tape';
-import {isPositionAvailable, isPositionAvailable} from '../src/Controller';
+import {isPositionAvailable, isPositionInFrontAvailable} from '../src/Controller';
 
 test('isPositionAvailable', t => {
     t.plan(5);
@@ -38,7 +38,7 @@ test('isPositionAvailable', t => {
 });
 
 
-test('isPositionAvailable', t => {
+test('isPositionInFrontAvailable', t => {
     t.plan(5);
 
     let matrix = [
@@ -46,27 +46,27 @@ test('isPositionAvailable', t => {
         [0, 1]
     ];
 
-    t.notOk(isPositionAvailable(matrix, {
+    t.notOk(isPositionInFrontAvailable(matrix, {
         x: 0,
         y: 1
     }, 'north'), 'north position off [0,1] is not available');
 
-    t.notOk(isPositionAvailable(matrix, {
+    t.notOk(isPositionInFrontAvailable(matrix, {
         x: 0,
         y: 1
     }, 'east'), 'east position off [0,1] is not available');
 
-    t.ok(isPositionAvailable(matrix, {
+    t.ok(isPositionInFrontAvailable(matrix, {
         x: 0,
         y: 0
     }, 'south'), 'south position off [0,0] is available');
 
-    t.ok(isPositionAvailable(matrix, {
+    t.ok(isPositionInFrontAvailable(matrix, {
         x: 1,
         y: 1
     }, 'west'), 'west position off [1,1] is not available');
 
-    t.notOk(isPositionAvailable(matrix, {
+    t.notOk(isPositionInFrontAvailable(matrix, {
         x: 0,
         y: 0
     }, 'west'), 'west position off [0,0] is not available');
