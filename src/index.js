@@ -15,7 +15,7 @@ let App = React.createClass({
         return {
             playback: {
                 enabled: false,
-                timeout: 333,
+                timeout: 150,
                 callback: this._moveRobot
             },
             robot: {
@@ -23,7 +23,7 @@ let App = React.createClass({
                     x: 0,
                     y: 0
                 },
-                direction: 'east',
+                direction: 'south',
                 log: 'Just started'
             },
             logs: []
